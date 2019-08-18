@@ -1,0 +1,44 @@
+<?php
+
+$carouselClass = $block->getCarouselClass();
+$carouselTitle = $block->getCarouselTitle();
+$carouselImage = $block->getCarouselImage();
+$carouselDescription = $block->getCarouselDescription();
+$carouselLinkUrl = $block->getCarouselLink();
+$linkTarget = $block->addBlank();
+
+?>
+
+
+<div class="col-sm-4 slider-wrapper <?php echo $carouselClass ?>">
+
+    <div class="item-content">
+        <div class="content-wrap">
+            <?php if ($carouselTitle) : ?>
+                <div class="slider-img">
+                    <img src="<?php echo $carouselImage; ?>" alt="">
+
+                    <a <?= ($linkTarget =='add-blank')?'target="_blank"':'' ?> class="title-link" href="<?php echo $carouselLinkUrl; ?>">
+                        <h3><?php echo $carouselTitle; ?></h3>
+                    </a>
+                </div>
+            <?php endif; ?>
+
+            <?php if ($carouselDescription) : ?>
+                <div class="slider-description">
+                    <?php echo $carouselDescription; ?>
+                </div>
+            <?php endif; ?>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

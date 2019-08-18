@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="widget_carousel" class="Pixel\WidgetCarousel\Block\Widget\CustomWidget" placeholder_image="Pixel_WidgetCarousel::images/widget_block.png">
+        <label translate="true">Apirx - Widget Carousel</label>
+        <description>Apirx - Widget for adding Carousel on page</description>
+        <parameters>
+            <parameter name="carousel_css_class" xsi:type="text" visible="true">
+                <label translate="true">CSS class</label>
+            </parameter>
+            <parameter name="carousel_image" xsi:type="block">
+                <label translate="true">Image</label>
+                <block class="Pixel\WidgetExt\Block\Adminhtml\Widget\Parameter\ImageChooser"/>
+            </parameter>
+            <parameter name="carousel_title" xsi:type="text" visible="true">
+                <label translate="true">Title</label>
+            </parameter>
+            <parameter name="carousel_description" xsi:type="block" visible="true">
+                <label translate="true">Description</label>
+                <block class="Pixel\WidgetExt\Block\Adminhtml\Widget\Parameter\Textarea"/>
+            </parameter>
+            <parameter name="carousel_link" xsi:type="text" visible="true">
+                <label translate="true">Link</label>
+            </parameter>
+            <parameter name="addBlank" xsi:type="select"  visible="true" >
+                <label translate="true">Open link in new window</label>
+                <options>
+                    <option name="no-blank" value="no-blank" selected="true">
+                        <label translate="true">No</label>
+                    </option>
+                    <option name="add-blank" value="add-blank">
+                        <label translate="true">Yes</label>
+                    </option>
+                </options>
+            </parameter>
+
+        </parameters>
+    </widget>
+</widgets>
